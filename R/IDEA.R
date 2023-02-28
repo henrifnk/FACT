@@ -1,13 +1,12 @@
 #' @title Idea - Isolated Effect on Assignment
 #'
 #' @description
-#' IDEA with a soft label predictor (sIDEA) \cr
-#' indicates how replacing values of a feature or a set of features
-#' changes the soft label of being assigned to each existing cluster for a
+#' `IDEA` with a soft label predictor (sIDEA) \cr
+#' tacks changes the soft label of being assigned to each existing cluster
+#' throughout a (multidimensional) feature space
 #' IDEA with a hard label predictor (hIDEA) \cr
-#' hIDEA indicates how replacing values of a feature or a set of features
-#' changes the hard cluster assignment of a single instance (local) or the
-#' distribution of hard cluster assignments (global).
+#' tacks changes the soft label of being assigned to each existing cluster
+#' throughout a (multidimensional) feature space
 #'
 #' @details
 #' IDEA for soft labeling algorithms (sIDEA) indicates the soft label that an
@@ -16,7 +15,7 @@
 #' the cluster assignment of an observation \eqn{\textbf{x}} with replaced values
 #' \eqn{\tilde{\textbf{x}}_S}. \cr
 #'
-#' The global IDEA is denoted by the corresponding data set X. The global sIDEA corresponds to:
+#' The global IDEA is denoted by the corresponding data set X:
 #' \deqn{
 #' \text{sIDEA}_X(\tilde{\textbf{x}}_S) = \left(\frac{1}{n} \sum_{i = 1}^n
 #' \text{sIDEA}^{(1)}_{\textbf{x}^{(i)}}(\tilde{\textbf{x}}_S), \dots, \frac{1}{n}

@@ -16,26 +16,20 @@ knitr::opts_chunk$set(
 )
 ```
 
-# FACT
+# FACT - (Feature Attributions for Clustering)
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-Understanding how assignments of instances to clusters can be attributed
-to the features can be vital in many applications. We present FACT
-(Feature Attributions for ClusTering), an algorithm-agnostic framework
-that preserves the integrity of the data and does not introduce
-additional models.
+To get value from a clustering algorithm, it is important to understand the assignment procedure of an algorithm that assigns instances to clusters. FACT is an algorithm agnostic framework that provides feature attribution while preserving the integrity of the data.
 
 ## Features
 
--   SMART (Scoring Metric AfteR permuTation) measures changes in cluster
-    assignments by custom scoring functions after permuting selected
-    features
--   IDEA (IsolateD Effect on Assignment) indicates local and global
-    changes in cluster assignments after making uniform changes to
-    selected features.
+- SMART (Scoring Metric After Permutation) permutes feature sets to measure the 
+  sensitivity of algorithms to changes in cluster assignments.
+- IDEA (Isolated Effect on Assignment) visualises local and global changes in
+  cluster assignments over one- and two-dimensional feature spaces.
 
 ## Installation
 

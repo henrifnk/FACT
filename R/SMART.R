@@ -1,15 +1,13 @@
 #' @title SMART - Scoring Metric after Permutation
 #'
 #' @description
-#' `SMART` indicates for the importance of a feature to the cluster assignment
-#' process by measuring changes in cluster assignments by custom scoring functions
-#' after permuting selected feature. Cluster-specific SMART indicates how shuffling
-#' the values of a feature or a set of features changes the assignment of instances
-#' to that specific cluster versus the remaining ones, measured by a binary scoring
-#' metric. Global SMART indicates how shuffling the values of a feature or a set
-#' of features changes the assignment of instances to all clusters, measured by a
-#' multi-class scoring metric. Currently, `SMART` can only be used for hard label
-#' predictors.
+#' `SMART` estimates the importance of a feature to the clustering algorithm
+#' by measuring changes in cluster assignments by scoring functions after
+#' permuting selected feature. Cluster-specific SMART indicates the importance
+#' of specific clusters versus the remaining ones, measured by a binary scoring
+#' metric. Global SMART assigns importance scores across all clusters, measured
+#' by a multi-class scoring metric. Currently, `SMART` can only be used for hard
+#' label predictors.
 #'
 #' @details Let \eqn{M \in \mathbb{N}_0^{k \times k}} denote the multi-cluster
 #' confusion matrix and \eqn{M_c \in \mathbb{N}_0^{2 \times 2}} the binary
