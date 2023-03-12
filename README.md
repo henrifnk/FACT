@@ -67,8 +67,19 @@ for our methods.
 predictor = ClustPredictor$new(c_lrn, data = tsk_usa$data(), y = c_lrn$model$membership)
 ```
 
-How does `Assault` effect the clustering outcome created by the
-`c-means`?
+How does `Assault` effect the partitions created by `c-means`
+clustering?
+
+The `sIDEA` plot shows:
+
+- **x-Axis**: The domain in the feature space of `Assault` were
+  realizations of observations can be found (visualised by the
+  `geom_rug`).
+- **y-Axis**: The associated soft labels score of cluster k, `f(k)`.
+- **solid line**: The estimated marginal, global effect of a cluster k
+  throughout feature space.
+- **transparent area**: 50% of the mass of individual effects. This area
+  plots the variance in effects throughout feature space.
 
 ``` r
 idea_assault = IDEA$new(predictor, "Assault", grid.size = 50)
@@ -76,6 +87,15 @@ idea_assault$plot_globals(0.5)
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="65%" style="display: block; margin: auto;" />
+
+**Short Interpretation:**
+
+- States in cluster 1 (red) are marginally associated with the lowest
+  `Assault` rate.
+- States in cluster 3 (blue) are marginally associated with a relatively
+  low `Assault` rate.
+- States in cluster 2 (green) are marginally associated with a
+  relatively high `Assault` rate.
 
 # Citation
 
