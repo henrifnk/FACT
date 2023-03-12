@@ -31,6 +31,7 @@
 #'
 #' @importFrom data.table rbindlist data.table
 #' @examples
+#' \dontrun{
 #' # load data and packages
 #' require(factoextra)
 #' require(FuzzyDBScan)
@@ -52,6 +53,7 @@
 #' classwise_f1 = SMART$new(predictor, n.repetitions = 50, metric = "f1")
 #' macro_f1 # print regional SMART
 #' macro_f1$plot(log = TRUE) # plot regional SMART
+#' }
 #' @seealso [iml::FeatureImp]
 #' @export
 SMART <- R6Class("SMART",
