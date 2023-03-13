@@ -37,7 +37,6 @@
 #' @import ggplot2
 #'
 #' @examples
-#' \dontrun{
 #' # load data and packages
 #' require(factoextra)
 #' require(FuzzyDBScan)
@@ -52,10 +51,8 @@
 #' predictor = ClustPredictor$new(res, as.data.frame(multishapes), y = res$results,
 #'                                     predict.function = predict_prob, type = "prob")
 #' # Calculate IDEA global and local for feature "x"
-#' idea_x = IDEA$new(predictor = predictor, feature = "x")
-#' idea_x$plot(2) # plot local and global effect of second cluster.
+#' idea_x = IDEA$new(predictor = predictor, feature = "x", grid.size = 5)
 #' idea_x$plot_globals(0.5) # plot global effect of all clusters with 50 percent of local mass.
-#' }
 #' @seealso [iml::FeatureEffects], [iml::FeatureEffects]
 #' @export
 IDEA <- R6Class("IDEA",
