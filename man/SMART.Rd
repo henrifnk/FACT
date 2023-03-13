@@ -34,6 +34,7 @@ estimate is given by: \cr
 where \eqn{\psi} extracts a sample statistic such as the mean or median or quantile.
 }
 \examples{
+\dontrun{
 # load data and packages
 require(factoextra)
 require(FuzzyDBScan)
@@ -55,6 +56,7 @@ macro_f1$plot(log = TRUE) # plot global SMART
 classwise_f1 = SMART$new(predictor, n.repetitions = 50, metric = "f1")
 macro_f1 # print regional SMART
 macro_f1$plot(log = TRUE) # plot regional SMART
+}
 }
 \seealso{
 \link[iml:FeatureImp]{iml::FeatureImp}

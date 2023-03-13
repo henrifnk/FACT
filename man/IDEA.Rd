@@ -35,6 +35,7 @@ where the c-th vector element is the fraction of hard label
 reassignments to the c-th cluster.
 }
 \examples{
+\dontrun{
 # load data and packages
 require(factoextra)
 require(FuzzyDBScan)
@@ -49,9 +50,9 @@ predict_prob = function(model, newdata) model$predict(new_data = newdata)
 predictor = ClustPredictor$new(res, as.data.frame(multishapes), y = res$results,
                                     predict.function = predict_prob, type = "prob")
 # Calculate IDEA global and local for feature "x"
-idea_x = IDEA$new(predictor = predictor, feature = "x")
-idea_x$plot(2) # plot local and global effect of second cluster.
+idea_x = IDEA$new(predictor = predictor, feature = "x", grid.size = 5)
 idea_x$plot_globals(0.5) # plot global effect of all clusters with 50 percent of local mass.
+}
 }
 \seealso{
 \link[iml:FeatureEffects]{iml::FeatureEffects}, \link[iml:FeatureEffects]{iml::FeatureEffects}

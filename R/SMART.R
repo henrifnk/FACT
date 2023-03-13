@@ -31,6 +31,7 @@
 #'
 #' @importFrom data.table rbindlist data.table
 #' @examples
+#' \dontrun{
 #' # load data and packages
 #' require(factoextra)
 #' require(FuzzyDBScan)
@@ -45,13 +46,14 @@
 #' predictor = ClustPredictor$new(res, as.data.frame(multishapes), y = res$clusters,
 #'                                predict.function = predict_part, type = "partition")
 #' # Run SMART globally
-#' macro_f1 = SMART$new(predictor, n.repetitions = 5, metric = "f1", avg = "macro")
+#' macro_f1 = SMART$new(predictor, n.repetitions = 50, metric = "f1", avg = "macro")
 #' macro_f1 # print global SMART
 #' macro_f1$plot(log = TRUE) # plot global SMART
 #' # Run cluster specific SMART
-#' classwise_f1 = SMART$new(predictor, n.repetitions = 5, metric = "f1")
+#' classwise_f1 = SMART$new(predictor, n.repetitions = 50, metric = "f1")
 #' macro_f1 # print regional SMART
 #' macro_f1$plot(log = TRUE) # plot regional SMART
+#' }
 #' @seealso [iml::FeatureImp]
 #' @export
 SMART <- R6Class("SMART",
