@@ -7,18 +7,18 @@
 \code{IDEA} with a soft label predictor (sIDEA) \cr
 tacks changes the soft label of being assigned to each existing cluster
 throughout a (multidimensional) feature space
-IDEA with a hard label predictor (hIDEA) \cr
+\code{IDEA} with a hard label predictor (hIDEA) \cr
 tacks changes the soft label of being assigned to each existing cluster
 throughout a (multidimensional) feature space
 }
 \details{
-IDEA for soft labeling algorithms (sIDEA) indicates the soft label that an
+\code{IDEA} for soft labeling algorithms (sIDEA) indicates the soft label that an
 observation \eqn{\textbf{x}} with replaced values \eqn{\tilde{\textbf{x}}_S} is assigned to
-the k-th cluster. IDEA for hard labeling algorithms (hIDEA) indicates
+the k-th cluster. \code{IDEA} for hard labeling algorithms (hIDEA) indicates
 the cluster assignment of an observation \eqn{\textbf{x}} with replaced values
 \eqn{\tilde{\textbf{x}}_S}. \cr
 
-The global IDEA is denoted by the corresponding data set X:
+The global \code{IDEA} is denoted by the corresponding data set X:
 \deqn{
 \text{sIDEA}_X(\tilde{\textbf{x}}_S) = \left(\frac{1}{n} \sum_{i = 1}^n
 \text{sIDEA}^{(1)}_{\textbf{x}^{(i)}}(\tilde{\textbf{x}}_S), \dots, \frac{1}{n}
@@ -35,7 +35,7 @@ where the c-th vector element is the fraction of hard label
 reassignments to the c-th cluster.
 }
 \examples{
-\dontrun{
+\donttest{
 # load data and packages
 require(factoextra)
 require(FuzzyDBScan)
@@ -49,7 +49,7 @@ res$plot("x", "y")
 predict_prob = function(model, newdata) model$predict(new_data = newdata)
 predictor = ClustPredictor$new(res, as.data.frame(multishapes), y = res$results,
                                     predict.function = predict_prob, type = "prob")
-# Calculate IDEA global and local for feature "x"
+# Calculate `IDEA` global and local for feature "x"
 idea_x = IDEA$new(predictor = predictor, feature = "x", grid.size = 5)
 idea_x$plot_globals(0.5) # plot global effect of all clusters with 50 percent of local mass.
 }
@@ -68,14 +68,14 @@ the cluster algorithm and the data.}
 Features/ feature sets to calculate the effect curves.}
 
 \item{\code{method}}{\code{character(1)}\cr
-The IDEA method to be used.}
+The \code{IDEA} method to be used.}
 
 \item{\code{mg}}{\code{DataGenerator}\cr
 A \code{MarginalGenerator} object to sample and generate
 the pseudo instances.}
 
 \item{\code{results}}{\code{data.table}\cr
-The IDEA results.}
+The \code{IDEA} results.}
 
 \item{\code{noise.out}}{any \cr
 Indicator for the noise variable.}
@@ -121,18 +121,18 @@ value of \code{NULL} implies all features. Use a named list of character vectors
 to define groups of features for which joint importance will be calculated.}
 
 \item{\code{method}}{\code{character(1)}\cr
-The IDEA method to be used. Possible choices for the method are:\cr
-\code{"g+l"} (default): store global and local IDEA results
+The \code{IDEA} method to be used. Possible choices for the method are:\cr
+\code{"g+l"} (default): store global and local \code{IDEA} results
 
-\code{"local"}: store only local IDEA results
+\code{"local"}: store only local \code{IDEA} results
 
-\code{"global"}: store only global IDEA results
+\code{"global"}: store only global \code{IDEA} results
 
-\code{"init_local"}: store only local IDEA results and
+\code{"init_local"}: store only local \code{IDEA} results and
 additional reference for the observations initial
 assigned cluster.
 
-\code{"init_g+l"} store global and local IDEA results and
+\code{"init_g+l"} store global and local \code{IDEA} results and
 additional reference for the observations initial
 assigned cluster.}
 
@@ -189,7 +189,7 @@ Plot the global sIDEA curves of all clusters.
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{mass}}{between 0 and 1. The percentage of local IDEA
+\item{\code{mass}}{between 0 and 1. The percentage of local \code{IDEA}
 curves to plot a certainty interval.}
 }
 \if{html}{\out{</div>}}

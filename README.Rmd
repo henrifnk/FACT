@@ -22,18 +22,18 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-To get value from a clustering algorithm, it is important to understand the assignment procedure of an algorithm that assigns instances to clusters. FACT is an algorithm agnostic framework that provides feature attribution while preserving the integrity of the data.
+To get value from a clustering algorithm, it is important to understand the assignment procedure of an algorithm that assigns instances to clusters. `FACT` is an algorithm agnostic framework that provides feature attribution while preserving the integrity of the data.
 
 ## Features
 
-- SMART (Scoring Metric After Permutation) permutes feature sets to measure the 
+- `SMART` (Scoring Metric After Permutation) permutes feature sets to measure the 
   sensitivity of algorithms to changes in cluster assignments.
-- IDEA (Isolated Effect on Assignment) visualises local and global changes in
+- `IDEA` (Isolated Effect on Assignment) visualises local and global changes in
   cluster assignments over one- and two-dimensional feature spaces.
 
 ## Installation
 
-You can install the development version of FACT like so:
+You can install the development version of `FACT` like so:
 
 ``` r
 # Development version
@@ -94,7 +94,7 @@ idea_assault$plot_globals(0.5)
 
 # Citation
 
-If you use FACT in a scientific publication, please
+If you use `FACT` in a scientific publication, please
 [cite](https://arxiv.org/abs/2209.10578) it as:
 
     Scholbeck, C. A., Funk, H., & Casalicchio, G. (2022). Algorithm-Agnostic Interpretations for Clustering. arXiv preprint arXiv:2209.10578.

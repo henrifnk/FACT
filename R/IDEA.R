@@ -4,18 +4,18 @@
 #' `IDEA` with a soft label predictor (sIDEA) \cr
 #' tacks changes the soft label of being assigned to each existing cluster
 #' throughout a (multidimensional) feature space
-#' IDEA with a hard label predictor (hIDEA) \cr
+#' `IDEA` with a hard label predictor (hIDEA) \cr
 #' tacks changes the soft label of being assigned to each existing cluster
 #' throughout a (multidimensional) feature space
 #'
 #' @details
-#' IDEA for soft labeling algorithms (sIDEA) indicates the soft label that an
+#' `IDEA` for soft labeling algorithms (sIDEA) indicates the soft label that an
 #' observation \eqn{\textbf{x}} with replaced values \eqn{\tilde{\textbf{x}}_S} is assigned to
-#' the k-th cluster. IDEA for hard labeling algorithms (hIDEA) indicates
+#' the k-th cluster. `IDEA` for hard labeling algorithms (hIDEA) indicates
 #' the cluster assignment of an observation \eqn{\textbf{x}} with replaced values
 #' \eqn{\tilde{\textbf{x}}_S}. \cr
 #'
-#' The global IDEA is denoted by the corresponding data set X:
+#' The global `IDEA` is denoted by the corresponding data set X:
 #' \deqn{
 #' \text{sIDEA}_X(\tilde{\textbf{x}}_S) = \left(\frac{1}{n} \sum_{i = 1}^n
 #' \text{sIDEA}^{(1)}_{\textbf{x}^{(i)}}(\tilde{\textbf{x}}_S), \dots, \frac{1}{n}
@@ -37,7 +37,7 @@
 #' @import ggplot2
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # load data and packages
 #' require(factoextra)
 #' require(FuzzyDBScan)
@@ -51,7 +51,7 @@
 #' predict_prob = function(model, newdata) model$predict(new_data = newdata)
 #' predictor = ClustPredictor$new(res, as.data.frame(multishapes), y = res$results,
 #'                                     predict.function = predict_prob, type = "prob")
-#' # Calculate IDEA global and local for feature "x"
+#' # Calculate `IDEA` global and local for feature "x"
 #' idea_x = IDEA$new(predictor = predictor, feature = "x", grid.size = 5)
 #' idea_x$plot_globals(0.5) # plot global effect of all clusters with 50 percent of local mass.
 #' }
@@ -69,18 +69,18 @@ IDEA <- R6Class("IDEA",
                   #'   value of `NULL` implies all features. Use a named list of character vectors
                   #'   to define groups of features for which joint importance will be calculated.
                   #' @param method `character(1)`\cr
-                  #'   The IDEA method to be used. Possible choices for the method are:\cr
-                  #'   `"g+l"` (default): store global and local IDEA results
+                  #'   The `IDEA` method to be used. Possible choices for the method are:\cr
+                  #'   `"g+l"` (default): store global and local `IDEA` results
                   #'
-                  #'   `"local"`: store only local IDEA results
+                  #'   `"local"`: store only local `IDEA` results
                   #'
-                  #'   `"global"`: store only global IDEA results
+                  #'   `"global"`: store only global `IDEA` results
                   #'
-                  #'   `"init_local"`: store only local IDEA results and
+                  #'   `"init_local"`: store only local `IDEA` results and
                   #'   additional reference for the observations initial
                   #'   assigned cluster.
                   #'
-                  #'   `"init_g+l"` store global and local IDEA results and
+                  #'   `"init_g+l"` store global and local `IDEA` results and
                   #'   additional reference for the observations initial
                   #'   assigned cluster.
                   #' @param grid.size `(numeric(1) or NULL)` \cr
@@ -143,7 +143,7 @@ IDEA <- R6Class("IDEA",
                   },
 
                   #' @description Plot the global sIDEA curves of all clusters.
-                  #' @param mass between 0 and 1. The percentage of local IDEA
+                  #' @param mass between 0 and 1. The percentage of local `IDEA`
                   #' curves to plot a certainty interval.
                   #' @return (ggplot)\cr
                   #' A ggplot object.
@@ -195,7 +195,7 @@ IDEA <- R6Class("IDEA",
                   feature = NULL,
 
                   #' @field method `character(1)`\cr
-                  #'  The IDEA method to be used.
+                  #'  The `IDEA` method to be used.
                   method = NULL,
 
                   #' @field mg `DataGenerator`\cr
@@ -204,7 +204,7 @@ IDEA <- R6Class("IDEA",
                   mg = NULL,
 
                   #' @field results `data.table`\cr
-                  #'  The IDEA results.
+                  #'  The `IDEA` results.
                   results = NULL,
 
                   #' @field noise.out any \cr

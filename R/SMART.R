@@ -1,17 +1,17 @@
-#' @title SMART - Scoring Metric after Permutation
+#' @title `SMART` - Scoring Metric after Permutation
 #'
 #' @description
 #' `SMART` estimates the importance of a feature to the clustering algorithm
 #' by measuring changes in cluster assignments by scoring functions after
-#' permuting selected feature. Cluster-specific SMART indicates the importance
+#' permuting selected feature. Cluster-specific `SMART` indicates the importance
 #' of specific clusters versus the remaining ones, measured by a binary scoring
-#' metric. Global SMART assigns importance scores across all clusters, measured
+#' metric. Global `SMART` assigns importance scores across all clusters, measured
 #' by a multi-class scoring metric. Currently, `SMART` can only be used for hard
 #' label predictors.
 #'
 #' @details Let \eqn{M \in \mathbb{N}_0^{k \times k}} denote the multi-cluster
 #' confusion matrix and \eqn{M_c \in \mathbb{N}_0^{2 \times 2}} the binary
-#' confusion matrix for cluster c versus the remaining clusters. SMART for
+#' confusion matrix for cluster c versus the remaining clusters. `SMART` for
 #' feature set S corresponds to:
 #' \deqn{
 #' \text{Multi-cluster scoring:} \quad \text{SMART}(X, \tilde{X}_S) = h_{\text{multi}}(M) \\
@@ -21,7 +21,7 @@
 #' macro averaging.
 #' In order to reduce variance in the estimate from shuffling the data, one can
 #' shuffle t times and evaluate the distribution of scores. Let \eqn{\tilde{X}_S^{(t)}}
-#' denote the t-th shuffling iteration for feature set S. The SMART point
+#' denote the t-th shuffling iteration for feature set S. The `SMART` point
 #' estimate is given by: \cr
 #' \deqn{
 #' \overline{\text{SMART}}(X, \tilde{X}_S) = \psi\left(\text{SMART}(X, \tilde{X}_S^{(1)}),
@@ -31,7 +31,7 @@
 #'
 #' @importFrom data.table rbindlist data.table
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # load data and packages
 #' require(factoextra)
 #' require(FuzzyDBScan)
@@ -120,7 +120,7 @@ SMART <- R6Class("SMART",
                      self$results = suppressPackageStartupMessages(private$run(self$predictor$batch.size))
                    },
 
-                   #' @description Print a SMART object
+                   #' @description Print a `SMART` object
                    #' @return `character` \cr
                    #' Information about `predictor`, `data`, `metric`, and `avg`
                    #' and head of the `results`.
@@ -140,7 +140,7 @@ SMART <- R6Class("SMART",
                      }
                    },
 
-                   #' @description plots the similarity score results of a SMART
+                   #' @description plots the similarity score results of a `SMART`
                    #' object.
                    #'
                    #' @param log `logical(1)` \cr
@@ -236,7 +236,7 @@ SMART <- R6Class("SMART",
                    n.repetitions = NULL,
 
                    #' @field results (`data.table`)\cr
-                   #'   A [data.table] containing the results from SMART procedure.
+                   #'   A [data.table] containing the results from `SMART` procedure.
                    results = NULL
                  ),
 

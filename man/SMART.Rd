@@ -2,20 +2,20 @@
 % Please edit documentation in R/SMART.R
 \name{SMART}
 \alias{SMART}
-\title{SMART - Scoring Metric after Permutation}
+\title{\code{SMART} - Scoring Metric after Permutation}
 \description{
 \code{SMART} estimates the importance of a feature to the clustering algorithm
 by measuring changes in cluster assignments by scoring functions after
-permuting selected feature. Cluster-specific SMART indicates the importance
+permuting selected feature. Cluster-specific \code{SMART} indicates the importance
 of specific clusters versus the remaining ones, measured by a binary scoring
-metric. Global SMART assigns importance scores across all clusters, measured
+metric. Global \code{SMART} assigns importance scores across all clusters, measured
 by a multi-class scoring metric. Currently, \code{SMART} can only be used for hard
 label predictors.
 }
 \details{
 Let \eqn{M \in \mathbb{N}_0^{k \times k}} denote the multi-cluster
 confusion matrix and \eqn{M_c \in \mathbb{N}_0^{2 \times 2}} the binary
-confusion matrix for cluster c versus the remaining clusters. SMART for
+confusion matrix for cluster c versus the remaining clusters. \code{SMART} for
 feature set S corresponds to:
 \deqn{
 \text{Multi-cluster scoring:} \quad \text{SMART}(X, \tilde{X}_S) = h_{\text{multi}}(M) \\
@@ -25,7 +25,7 @@ where \eqn{\text{AVE}} averages a vector of binary scores, e.g., via micro or
 macro averaging.
 In order to reduce variance in the estimate from shuffling the data, one can
 shuffle t times and evaluate the distribution of scores. Let \eqn{\tilde{X}_S^{(t)}}
-denote the t-th shuffling iteration for feature set S. The SMART point
+denote the t-th shuffling iteration for feature set S. The \code{SMART} point
 estimate is given by: \cr
 \deqn{
 \overline{\text{SMART}}(X, \tilde{X}_S) = \psi\left(\text{SMART}(X, \tilde{X}_S^{(1)}),
@@ -34,7 +34,7 @@ estimate is given by: \cr
 where \eqn{\psi} extracts a sample statistic such as the mean or median or quantile.
 }
 \examples{
-\dontrun{
+\donttest{
 # load data and packages
 require(factoextra)
 require(FuzzyDBScan)
@@ -95,7 +95,7 @@ Features/ feature sets to calculate importance scores.}
 How often is the shuffling of the feature repeated?}
 
 \item{\code{results}}{(\code{data.table})\cr
-A \link{data.table} containing the results from SMART procedure.}
+A \link{data.table} containing the results from \code{SMART} procedure.}
 }
 \if{html}{\out{</div>}}
 }
@@ -175,7 +175,7 @@ For cluster specific scores each column indicates for a different cluster.
 \if{html}{\out{<a id="method-SMART-print"></a>}}
 \if{latex}{\out{\hypertarget{method-SMART-print}{}}}
 \subsection{Method \code{print()}}{
-Print a SMART object
+Print a \code{SMART} object
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SMART$print()}\if{html}{\out{</div>}}
 }
@@ -190,7 +190,7 @@ and head of the \code{results}.
 \if{html}{\out{<a id="method-SMART-plot"></a>}}
 \if{latex}{\out{\hypertarget{method-SMART-plot}{}}}
 \subsection{Method \code{plot()}}{
-plots the similarity score results of a SMART
+plots the similarity score results of a \code{SMART}
 object.
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{SMART$plot(log = FALSE, single_cl = NULL)}\if{html}{\out{</div>}}
