@@ -7,16 +7,16 @@
 <!-- badges: end -->
 
 To get value from a clustering algorithm, it is important to understand
-the assignment procedure of an algorithm that assigns instances to
-clusters. `FACT` is an algorithm agnostic framework that provides
-feature attribution while preserving the integrity of the data.
+the mapping procedure of an algorithm that assigns instances to
+clusters. FACT is an algorithm agnostic framework that provides feature
+attribution while preserving the integrity of the data.
 
 ## Features
 
 - `SMART` (Scoring Metric After Permutation) permutes feature sets to
   measure the sensitivity of algorithms to changes in cluster
   assignments.
-- `IDEA` (Isolated Effect on Assignment) visualises local and global
+- `IDEA` (Isolated Effect on Assignment) visualizes local and global
   changes in cluster assignments over one- and two-dimensional feature
   spaces.
 
@@ -31,7 +31,7 @@ remotes::install_github("henrifnk/FACT")
 
 ## Quickstart
 
-We want to divide American states by their standardized crime rates in 3
+We aim to divide American states by their standardized crime rates in 3
 clusters.
 
 ``` r
@@ -60,8 +60,8 @@ c_lrn = lrn("clust.cmeans", centers = 3, predict_type = "prob")
 c_lrn$train(tsk_usa)
 ```
 
-Then, we create a `ClustPredictor` that wraps all the information needed
-for our methods.
+Then, we create a `ClustPredictor` that wraps the information needed for
+our methods.
 
 ``` r
 predictor = ClustPredictor$new(c_lrn, data = tsk_usa$data(), y = c_lrn$model$membership)
@@ -73,13 +73,13 @@ clustering?
 The `sIDEA` plot shows:
 
 - **x-Axis**: The domain in the feature space of `Assault` were
-  realizations of observations can be found (visualised by the
+  realizations of observations can be found (visualized by the
   `geom_rug`).
 - **y-Axis**: The associated soft labels score of cluster k, `f(k)`.
 - **solid line**: The estimated marginal, global effect of a cluster k
-  throughout feature space.
-- **transparent area**: 50% of the mass of individual effects. This area
-  plots the variance in effects throughout feature space.
+  over the feature space.
+- **transparent area**: 50% of the mass of the individual effects. This
+  area represents the variance of the effects across feature space.
 
 ``` r
 idea_assault = IDEA$new(predictor, "Assault", grid.size = 50)

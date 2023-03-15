@@ -15,13 +15,14 @@ Authors@R: c(person(given = "Henri",
            role = c("aut", "ctb"),
            email = "Giuseppe.Casalicchio@stat.uni-muenchen.de"))
 Description: We present 'FACT' (Feature Attributions for ClusTering), a framework for
-  framework for unsupervised interpretation methods that can be used with any
-  any clustering algorithm capable of re-assigning instances to clusters (algorithm agnostic),
-  preserves the integrity of the data and does not introduce additional models.
-  'FACT' is inspired by the principles of model-agnostic interpretation in 
-  supervised learning. Therefore, some of the methods presented are based on 'iml':
-  An R Package for Interpretable Machine Learning by Christoph Molnar,
-  Giuseppe Casalicchio, and Bernd Bischl (2018) <doi:10.21105/joss.00786>.
+  framework for unsupervised interpretation methods that can be used with 
+  clustering algorithm. The package is capable of re-assigning instances to
+  clusters (algorithm agnostic), preserves the integrity of the data and does
+  not introduce additional models. 'FACT' is inspired by the principles of
+  model-agnostic interpretation in supervised learning. Therefore, some of the
+  methods presented are based on 'iml': An R Package for Interpretable Machine
+  Learning by Christoph Molnar, Giuseppe Casalicchio, and Bernd Bischl (2018)
+  <doi:10.21105/joss.00786>.
 License: LGPL-3
 BugReports: https://github.com/henrifnk/FACT/issues
 Imports:
