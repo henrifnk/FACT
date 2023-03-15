@@ -20,7 +20,7 @@ Description: We present 'FACT' (Feature Attributions for ClusTering), a
   clusters (algorithm agnostic), preserves the integrity of the data and does
   not introduce additional models. 'FACT' is inspired by the principles of
   model-agnostic interpretation in supervised learning. Therefore, some of the
-  methods presented are based on 'iml', an R Package for Interpretable Machine
+  methods presented are based on 'iml', a R Package for Interpretable Machine
   Learning by Christoph Molnar, Giuseppe Casalicchio, and Bernd Bischl (2018)
   <doi:10.21105/joss.00786>.
 License: LGPL-3
