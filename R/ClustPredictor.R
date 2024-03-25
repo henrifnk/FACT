@@ -7,7 +7,6 @@
 #' `ClustPredictor` object.
 #'
 #' @importFrom R6 R6Class
-#' @importFrom prediction find_data
 #' @importFrom iml Predictor
 #' @import checkmate
 #'
@@ -79,12 +78,7 @@ ClustPredictor <- R6Class("ClustPredictor",
                                 stop("Provide a model, a predict.fun or both!")
                               }
                               if (is.null(data)) {
-                                tryCatch(
-                                  {
-                                    data <- find_data(model)
-                                  },
-                                  error = function(e) stop("Can't extract data from model, please provide via data=")
-                                )
+                                stop("Can't extract data from model, please provide via data=")
                               }
                               if (inherits(data, "data.table")) {
                                 setDF(data)

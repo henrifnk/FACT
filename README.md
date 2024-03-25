@@ -100,17 +100,25 @@ idea_assault$plot_globals(0.5)
 # Citation
 
 If you use `FACT` in a scientific publication, please
-[cite](https://arxiv.org/abs/2209.10578) it as:
+[cite](https://doi.org/10.1007/978-3-031-44064-9_13) it as:
 
-    Scholbeck, C. A., Funk, H., & Casalicchio, G. (2022). Algorithm-Agnostic Interpretations for Clustering. arXiv preprint arXiv:2209.10578.
+    Scholbeck, C.A., Funk, H., Casalicchio, G. (2023). Algorithm-Agnostic Feature Attributions for Clustering. In: Longo, L. (eds) Explainable Artificial Intelligence. xAI 2023. Communications in Computer and Information Science, vol 1901. Springer, Cham. https://doi.org/10.1007/978-3-031-44064-9_13
 
 BibTeX:
 
 ``` tex
-@article{FACT_22,
-  title={Algorithm-Agnostic Interpretations for Clustering},
-  author={Scholbeck, Christian A and Funk, Henri and Casalicchio, Giuseppe},
-  journal={arXiv preprint arXiv:2209.10578},
-  year={2022}
+@InProceedings{10.1007/978-3-031-44064-9_13,
+author="Scholbeck, Christian A.
+and Funk, Henri
+and Casalicchio, Giuseppe",
+editor="Longo, Luca",
+title="Algorithm-Agnostic Feature Attributions for Clustering",
+booktitle="Explainable Artificial Intelligence",
+year="2023",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="217--240",
+abstract="Understanding how assignments of instances to clusters can be attributed to the features can be vital in many applications. However, research to provide such feature attributions has been limited. Clustering algorithms with built-in explanations are scarce. Common algorithm-agnostic approaches involve dimension reduction and subsequent visualization, which transforms the original features used to cluster the data; or training a supervised learning classifier on the found cluster labels, which adds additional and intractable complexity. We present FACT (feature attributions for clustering), an algorithm-agnostic framework that preserves the integrity of the data and does not introduce additional models. As the defining characteristic of FACT, we introduce a set of work stages: sampling, intervention, reassignment, and aggregation. Furthermore, we propose two novel FACT methods: SMART (scoring metric after permutation) measures changes in cluster assignments by custom scoring functions after permuting selected features; IDEA (isolated effect on assignment) indicates local and global changes in cluster assignments after making uniform changes to selected features.",
+isbn="978-3-031-44064-9"
 }
 ```

@@ -1,7 +1,7 @@
 Package: FACT
 Type: Package
 Title: Feature Attributions for ClusTering
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person(given = "Henri",
            family = "Funk",
            role = c("aut", "cre"),
@@ -30,7 +30,6 @@ Imports:
     data.table,
     ggplot2,
     gridExtra,
-    prediction,
     R6,
     iml
 Encoding: UTF-8
@@ -49,5 +48,5 @@ Suggests:
     spelling
 Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.2
+RoxygenNote: 7.2.3
 Language: en-US
