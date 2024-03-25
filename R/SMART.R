@@ -297,11 +297,11 @@ SMART <- R6Class("SMART",
                          results = lapply(featurewise_results, function(x) {
                            apply(x[, .SD, .SDcols = names(n_classes)], 1, mean)})
                        }
-                       results = t(sapply(results, function(x){
+                       results = t(vapply(results, function(x){
                          c("quant" = quantile(x, probs = 0.05),
                            "median" = median(x),
                            "quant" = quantile(x, probs = 0.95)
-                         )}))
+                         )}, numeric(3)))
                        return(data.table(results, keep.rownames = TRUE))
                      }
                      result <- rbindlist(unname(featurewise_results), use.names = TRUE)

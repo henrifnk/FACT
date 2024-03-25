@@ -29,7 +29,7 @@ evaluate_class = function(actual, predicted, metric = "f1"){
                  folkes_mallows = sqrt((diag / colsums) * (diag / rowsums)),
                  accuracy = {
                    a = rep(sum(diag), times = length(diag)) / n
-                   names(a) = 1:length(diag)
+                   names(a) = seq_len(diag)
                    a}
   )
   c(score, n = n)
