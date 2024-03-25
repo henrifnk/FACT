@@ -1,5 +1,11 @@
-## R CMD check results
+## Version 0.1.0 - 2023-03-16
+- Initial submission 
+- Local R CMD check results: OK
+- R-hub checks: OK
+- Win-builder checks: OK
 
-0 errors | 0 warnings | 1 note
-
-* This is a new release.
+## Version 0.1.1 - 2024-03-25
+- avoid `prediction` package dependency.
+- Local R CMD check results: OK
+- R-hub checks: OK
+- Win-builder checks: OK
