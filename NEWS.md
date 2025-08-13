@@ -7,3 +7,7 @@
 
 * avoid `prediction` package dependency.
 * update citation information.
+
+# FACT 0.1.2
+
+* link package `data.table` to functions on help pages.

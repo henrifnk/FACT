@@ -95,7 +95,7 @@ Features/ feature sets to calculate importance scores.}
 How often is the shuffling of the feature repeated?}
 
 \item{\code{results}}{(\code{data.table})\cr
-A \link{data.table} containing the results from \code{SMART} procedure.}
+A \link[data.table:data.table]{data.table::data.table} containing the results from \code{SMART} procedure.}
 }
 \if{html}{\out{</div>}}
 }

@@ -9,3 +9,7 @@
 - Local R CMD check results: OK
 - R-hub checks: OK
 - Win-builder checks: OK
+
+## Version 0.1.2 - 20245-08-13
+- link package `data.table` to functions on help pages, add rhub
+- Local R CMD check results: OK

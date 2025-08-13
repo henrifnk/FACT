@@ -236,7 +236,7 @@ SMART <- R6Class("SMART",
                    n.repetitions = NULL,
 
                    #' @field results (`data.table`)\cr
-                   #'   A [data.table] containing the results from `SMART` procedure.
+                   #'   A [data.table::data.table] containing the results from `SMART` procedure.
                    results = NULL
                  ),
 
